@@ -9,16 +9,20 @@ class FizzBuzz {
         while (i < 100) {
             //for (int i = 1; i < 100; i++) {
 
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
-
-            // Print our appropriate result.
-            doFizzBizz(divisibleBy3, divisibleBy5, i);
+            extracted(i);
             i++;}
         }
 
-        private static void doFizzBizz ( boolean divisibleBy3, boolean divisibleBy5, int i){
+    public static void extracted(int i) {
+        // Find out which numbers divide i.
+        boolean divisibleBy3 = i % 3 == 0;
+        boolean divisibleBy5 = i % 5 == 0;
+
+        // Print our appropriate result.
+        doFizzBizz(divisibleBy3, divisibleBy5, i);
+    }
+
+    private static void doFizzBizz ( boolean divisibleBy3, boolean divisibleBy5, int i){
             if (divisibleBy3 && divisibleBy5) {
 
                 System.out.println("Fizz Buzz");
